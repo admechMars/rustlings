@@ -61,7 +61,7 @@ fn compile_and_run(exercise: &Exercise) -> Result<(), ()> {
     match result {
         Ok(output) => {
             println!("{}", output.stdout);
-            success!("Successfully ran {}", exercise);
+            success!("Código executado com sucesso {}", exercise);
             Ok(())
         }
         Err(output) => {

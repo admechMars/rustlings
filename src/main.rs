@@ -59,7 +59,7 @@ enum Subcommands {
         name: String,
     },
     /// Return a hint for the given exercise
-    Hint {
+    Dica {
         /// The name of the exercise
         name: String,
     },
@@ -207,7 +207,7 @@ fn main() -> Result<()> {
             reset(exercise).unwrap_or_else(|_| std::process::exit(1));
         }
 
-        Subcommands::Hint { name } => {
+        Subcommands::Dica { name } => {
             let exercise = find_exercise(&name, &exercises);
 
             println!("{}", exercise.hint);
@@ -254,7 +254,7 @@ fn spawn_watch_shell(
     failed_exercise_hint: Arc<Mutex<Option<String>>>,
     should_quit: Arc<AtomicBool>,
 ) {
-    println!("Welcome to watch mode! You can type 'help' to get an overview of the commands you can use here.");
+    println!("Para obter uma ajuda no exercício digite 'dica' (sem aspas)");
 
     thread::spawn(move || {
         let mut input = String::with_capacity(32);
@@ -269,7 +269,7 @@ fn spawn_watch_shell(
             }
 
             let input = input.trim();
-            if input == "hint" {
+            if input == "dica" {
                 if let Some(hint) = &*failed_exercise_hint.lock().unwrap() {
                     println!("{hint}");
                 }
@@ -278,8 +278,10 @@ fn spawn_watch_shell(
             } else if input == "quit" {
                 should_quit.store(true, Ordering::SeqCst);
                 println!("Bye!");
-            } else if input == "help" {
-                println!("{WATCH_MODE_HELP_MESSAGE}");
+            } else if input == "ajuda" {
+                if let Some(hint) = &*failed_exercise_hint.lock().unwrap() {
+                    println!("{hint}");
+                }
             } else if let Some(cmd) = input.strip_prefix('!') {
                 let mut parts = Shlex::new(cmd);
 
@@ -292,7 +294,9 @@ fn spawn_watch_shell(
                     println!("failed to execute command `{cmd}`: {e}");
                 }
             } else {
-                println!("unknown command: {input}\n{WATCH_MODE_HELP_MESSAGE}");
+                if let Some(hint) = &*failed_exercise_hint.lock().unwrap() {
+                    println!("{hint}");
+                }
             }
         }
     });
@@ -341,7 +345,7 @@ fn watch(
     let mut debouncer = new_debouncer(Duration::from_secs(1), tx)?;
     debouncer
         .watcher()
-        .watch(Path::new("../exercicios"), RecursiveMode::Recursive)?;
+        .watch(Path::new("./exercicios"), RecursiveMode::Recursive)?;
 
     clear_screen();
 
@@ -471,13 +475,3 @@ const WELCOME: &str = r"       welcome to...
  | |  | |_| \__ \ |_| | | | | | (_| \__ \
  |_|   \__,_|___/\__|_|_|_| |_|\__, |___/
                                |___/";
-
-const WATCH_MODE_HELP_MESSAGE: &str = "Commands available to you in watch mode:
-  hint   - prints the current exercise's hint
-  clear  - clears the screen
-  quit   - quits watch mode
-  !<cmd> - executes a command, like `!rustc --explain E0381`
-  help   - displays this help message
-
-Watch mode automatically re-evaluates the current exercise
-when you edit a file's contents.";

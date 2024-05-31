@@ -19,7 +19,7 @@ pub fn verify<'a>(
     let mut percentage = num_done as f32 / total as f32 * 100.0;
     bar.set_style(
         ProgressStyle::default_bar()
-            .template("Progress: [{bar:60.green/red}] {pos}/{len} {msg}")
+            .template("Progresso: [{bar:60.green/red}] {pos}/{len} {msg}")
             .expect("Progressbar template should be valid!")
             .progress_chars("#>-"),
     );
@@ -174,9 +174,9 @@ fn prompt_for_completion(
         State::Pending(context) => context,
     };
     match exercise.mode {
-        Mode::Compile => success!("Successfully ran {}!", exercise),
-        Mode::Test => success!("Successfully tested {}!", exercise),
-        Mode::Clippy => success!("Successfully compiled {}!", exercise),
+        Mode::Compile => success!("Código executado com sucesso {}!", exercise),
+        Mode::Test => success!("Código testado com sucesso {}!", exercise),
+        Mode::Clippy => success!("Código compilado com sucesso {}!", exercise),
     }
 
     let no_emoji = env::var("NO_EMOJI").is_ok();
@@ -188,8 +188,8 @@ fn prompt_for_completion(
     };
 
     let success_msg = match exercise.mode {
-        Mode::Compile => "The code is compiling!",
-        Mode::Test => "The code is compiling, and the tests pass!",
+        Mode::Compile => "O código está compilando!",
+        Mode::Test => "O código está compilando, e os testes passaram!",
         Mode::Clippy => clippy_success_msg,
     };
 
@@ -201,7 +201,7 @@ fn prompt_for_completion(
 
     if let Some(output) = prompt_output {
         println!(
-            "Output:\n{separator}\n{output}\n{separator}\n",
+            "Resultado:\n{separator}\n{output}\n{separator}\n",
             separator = separator(),
         );
     }
@@ -213,10 +213,10 @@ fn prompt_for_completion(
         );
     }
 
-    println!("You can keep working on this exercise,");
+    println!("Você pode continuar trabalhando nesse exercício,");
     println!(
-        "or jump into the next one by removing the {} comment:",
-        style("`I AM NOT DONE`").bold()
+        "ou passar para o próximo exercício removendo o comentário {}:",
+        style("`EU NÃO ESTOU PRONTO`").bold()
     );
     println!();
     for context_line in context {

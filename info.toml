@@ -1,31 +1,47 @@
+# Intro
+[[exercises]]
+name = "exemplo"
+path = "exercicios/00_into/exemplo.rs"
+mode = "compile"
+hint = """
+Isso é um exemplo de dica
+"""
+
 # Variáveis
 
 [[exercises]]
 name = "variaveis1"
-path = "exercises/01_variaveis/variaveis1.rs"
+path = "exercicios/01_variaveis/variaveis1.rs"
 mode = "compile"
 hint = """
 """
 
 [[exercises]]
 name = "variaveis2"
-path = "exercises/01_variaveis/variaveis2.rs"
-mode = "compile"
-hint = """
-"""
-
-# Dono
-
-[[exercises]]
-name = "dono1"
-path = "exercises/02_dono/dono1.rs"
+path = "exercicios/01_variaveis/variaveis2.rs"
 mode = "compile"
 hint = """
 """
 
 [[exercises]]
-name = "dono2"
-path = "exercises/02_dono/dono2.rs"
+name = "variaveis3"
+path = "exercicios/01_variaveis/variaveis3.rs"
+mode = "compile"
+hint = """
+"""
+
+# Empréstimo
+
+[[exercises]]
+name = "emprestimo1"
+path = "exercicios/02_emprestimo/emprestimo1.rs"
+mode = "compile"
+hint = """
+"""
+
+[[exercises]]
+name = "emprestimo2"
+path = "exercicios/02_emprestimo/emprestimo2.rs"
 mode = "compile"
 hint = """
 """
@@ -34,14 +50,21 @@ hint = """
 
 [[exercises]]
 name = "referencia1"
-path = "exercises/03_referencia/referencia1.rs"
+path = "exercicios/03_referencia/referencia1.rs"
 mode = "compile"
 hint = """
 """
 
 [[exercises]]
 name = "referencia2"
-path = "exercises/03_referencia/referencia2.rs"
+path = "exercicios/03_referencia/referencia2.rs"
 mode = "compile"
+hint = """
+"""
+
+[[exercises]]
+name = "referencia3"
+path = "exercicios/03_referencia/referencia3.rs"
+mode = "test"
 hint = """
 """

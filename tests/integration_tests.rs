@@ -159,7 +159,7 @@ fn all_exercises_require_confirmation() {
             s
         };
         source
-            .matches("// I AM NOT DONE")
+            .matches("// EU NÃO ESTOU PRONTO")
             .next()
             .unwrap_or_else(|| {
                 panic!(

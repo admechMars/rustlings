@@ -22,7 +22,7 @@ fn contains_not_done_comment(input: &str) -> bool {
         "//",
         opt('/'),
         space0,
-        Caseless("I AM NOT DONE"),
+        Caseless("EU NÃO ESTOU PRONTO"),
     )
         .parse_next(&mut &*input)
         .is_ok()
@@ -403,7 +403,7 @@ mod test {
                 important: false,
             },
             ContextLine {
-                line: "// I AM NOT DONE".to_string(),
+                line: "// EU NÃO ESTOU PRONTO".to_string(),
                 number: 3,
                 important: true,
             },
