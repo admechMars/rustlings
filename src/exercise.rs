@@ -13,7 +13,7 @@ const RUSTC_COLOR_ARGS: &[&str] = &["--color", "always"];
 const RUSTC_EDITION_ARGS: &[&str] = &["--edition", "2021"];
 const RUSTC_NO_DEBUG_ARGS: &[&str] = &["-C", "strip=debuginfo"];
 const CONTEXT: usize = 2;
-const CLIPPY_CARGO_TOML_PATH: &str = "./exercises/22_clippy/Cargo.toml";
+const CLIPPY_CARGO_TOML_PATH: &str = "./exercicios/22_clippy/Cargo.toml";
 
 // Checks if the line contains the "I AM NOT DONE" comment.
 fn contains_not_done_comment(input: &str) -> bool {
@@ -153,7 +153,7 @@ path = "{}.rs""#,
                     "Failed to write 📎 Clippy 📎 Cargo.toml file."
                 };
                 fs::write(CLIPPY_CARGO_TOML_PATH, cargo_toml).expect(cargo_toml_error_msg);
-                // To support the ability to run the clippy exercises, build
+                // To support the ability to run the clippy exercicios, build
                 // an executable, in addition to running clippy. With a
                 // compilation failure, this would silently fail. But we expect
                 // clippy to reflect the same failure while compiling later.
@@ -448,17 +448,17 @@ mod test {
 
     #[test]
     fn test_not_done() {
-        assert!(contains_not_done_comment("// I AM NOT DONE"));
-        assert!(contains_not_done_comment("/// I AM NOT DONE"));
-        assert!(contains_not_done_comment("//  I AM NOT DONE"));
-        assert!(contains_not_done_comment("///  I AM NOT DONE"));
-        assert!(contains_not_done_comment("// I AM NOT DONE "));
-        assert!(contains_not_done_comment("// I AM NOT DONE!"));
-        assert!(contains_not_done_comment("// I am not done"));
-        assert!(contains_not_done_comment("// i am NOT done"));
+        assert!(contains_not_done_comment("// EU NÃO ESTOU PRONTO"));
+        assert!(contains_not_done_comment("/// EU NÃO ESTOU PRONTO"));
+        assert!(contains_not_done_comment("//  EU NÃO ESTOU PRONTO"));
+        assert!(contains_not_done_comment("///  EU NÃO ESTOU PRONTO"));
+        assert!(contains_not_done_comment("// EU NÃO ESTOU PRONTO "));
+        assert!(contains_not_done_comment("// EU NÃO ESTOU PRONTO!"));
+        assert!(contains_not_done_comment("// Eu não estou pronto"));
+        assert!(contains_not_done_comment("// eu não estou pronto"));
 
-        assert!(!contains_not_done_comment("I AM NOT DONE"));
-        assert!(!contains_not_done_comment("// NOT DONE"));
-        assert!(!contains_not_done_comment("DONE"));
+        assert!(!contains_not_done_comment("EU NÃO ESTOU PRONTO"));
+        assert!(!contains_not_done_comment("// NÃO ESTOU PRONTO"));
+        assert!(!contains_not_done_comment("PRONTO"));
     }
 }

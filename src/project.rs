@@ -74,7 +74,7 @@ pub fn write_project_json(exercises: Vec<Exercise>) -> Result<()> {
 
     // Using the capacity 2^14 since the file length in bytes is higher than 2^13.
     // The final length is not known exactly because it depends on the user's sysroot path,
-    // the current number of exercises etc.
+    // the current number of exercicios etc.
     let mut buf = Vec::with_capacity(1 << 14);
     serde_json::to_writer(&mut buf, &content)?;
     std::fs::write("rust-project.json", buf)?;

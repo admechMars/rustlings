@@ -40,7 +40,7 @@ pub fn verify<'a>(
         bar.set_message(format!("({percentage:.1} %)"));
         if bar.position() == total as u64 {
             println!(
-                "Progress: You completed {} / {} exercises ({:.1} %).",
+                "Progesso: Você completou {} / {} exercicios ({:.1} %).",
                 bar.position(),
                 total,
                 percentage

@@ -147,7 +147,7 @@ fn get_hint_for_single_test() {
 
 #[test]
 fn all_exercises_require_confirmation() {
-    for exercise in glob("exercises/**/*.rs").unwrap() {
+    for exercise in glob("exercicios/**/*.rs").unwrap() {
         let path = exercise.unwrap();
         if path.file_name().unwrap() == "mod.rs" {
             continue;

@@ -27,11 +27,11 @@ mod project;
 mod run;
 mod verify;
 
-/// Rustlings is a collection of small exercises to get you used to writing and reading Rust code
+/// Rustlings is a collection of small exercicios to get you used to writing and reading Rust code
 #[derive(Parser)]
 #[command(version)]
 struct Args {
-    /// Show outputs from the test exercises
+    /// Show outputs from the test exercicios
     #[arg(long)]
     nocapture: bool,
     #[command(subcommand)]
@@ -40,7 +40,7 @@ struct Args {
 
 #[derive(Subcommand)]
 enum Subcommands {
-    /// Verify all exercises according to the recommended order
+    /// Verify all exercicios according to the recommended order
     Verify,
     /// Rerun `verify` when files were edited
     Watch {
@@ -63,26 +63,26 @@ enum Subcommands {
         /// The name of the exercise
         name: String,
     },
-    /// List the exercises available in Rustlings
+    /// List the exercicios available in Rustlings
     List {
-        /// Show only the paths of the exercises
+        /// Show only the paths of the exercicios
         #[arg(short, long)]
         paths: bool,
-        /// Show only the names of the exercises
+        /// Show only the names of the exercicios
         #[arg(short, long)]
         names: bool,
         /// Provide a string to match exercise names.
         /// Comma separated patterns are accepted
         #[arg(short, long)]
         filter: Option<String>,
-        /// Display only exercises not yet solved
+        /// Display only exercicios not yet solved
         #[arg(short, long)]
         unsolved: bool,
-        /// Display only exercises that have been solved
+        /// Display only exercicios that have been solved
         #[arg(short, long)]
         solved: bool,
     },
-    /// Enable rust-analyzer for exercises
+    /// Enable rust-analyzer for exercicios
     Lsp,
 }
 
@@ -187,7 +187,7 @@ fn main() -> Result<()> {
 
             let percentage_progress = exercises_done as f32 / exercises.len() as f32 * 100.0;
             println!(
-                "Progress: You completed {} / {} exercises ({:.1} %).",
+                "Progress: You completed {} / {} exercicios ({:.1} %).",
                 exercises_done,
                 exercises.len(),
                 percentage_progress
@@ -223,7 +223,7 @@ fn main() -> Result<()> {
                 println!("Failed to write rust-project.json to disk for rust-analyzer: {e}");
             } else {
                 println!("Successfully generated rust-project.json");
-                println!("rust-analyzer will now parse exercises, restart your language server or editor");
+                println!("rust-analyzer will now parse exercicios, restart your language server or editor");
             }
         }
 
@@ -235,14 +235,14 @@ fn main() -> Result<()> {
             }
             Ok(WatchStatus::Finished) => {
                 println!(
-                    "{emoji} All exercises completed! {emoji}",
+                    "{emoji} All exercicios completed! {emoji}",
                     emoji = Emoji("🎉", "★")
                 );
                 println!("\n{FENISH_LINE}\n");
             }
             Ok(WatchStatus::Unfinished) => {
                 println!("We hope you're enjoying learning about Rust!");
-                println!("If you want to continue working on the exercises at a later point, you can simply run `rustlings watch` again");
+                println!("If you want to continue working on the exercicios at a later point, you can simply run `rustlings watch` again");
             }
         },
     }
@@ -304,8 +304,8 @@ fn find_exercise<'a>(name: &str, exercises: &'a [Exercise]) -> &'a Exercise {
             .iter()
             .find(|e| !e.looks_done())
             .unwrap_or_else(|| {
-                println!("🎉 Congratulations! You have done all the exercises!");
-                println!("🔚 There are no more exercises to do next!");
+                println!("🎉 Congratulations! You have done all the exercicios!");
+                println!("🔚 There are no more exercicios to do next!");
                 std::process::exit(1)
             })
     } else {
@@ -341,7 +341,7 @@ fn watch(
     let mut debouncer = new_debouncer(Duration::from_secs(1), tx)?;
     debouncer
         .watcher()
-        .watch(Path::new("./exercises"), RecursiveMode::Recursive)?;
+        .watch(Path::new("../exercicios"), RecursiveMode::Recursive)?;
 
     clear_screen();
 
@@ -415,8 +415,8 @@ Is this your first time? Don't worry, Rustlings was made for beginners! We are
 going to teach you a lot of things about Rust, but before we can get
 started, here's a couple of notes about how Rustlings operates:
 
-1. The central concept behind Rustlings is that you solve exercises. These
-   exercises usually have some sort of syntax error in them, which will cause
+1. The central concept behind Rustlings is that you solve exercicios. These
+   exercicios usually have some sort of syntax error in them, which will cause
    them to fail compilation or testing. Sometimes there's a logic error instead
    of a syntax error. No matter what error, it's your job to find it and fix it!
    You'll know when you fixed it because then, the exercise will compile and
@@ -431,7 +431,7 @@ started, here's a couple of notes about how Rustlings operates:
 4. If an exercise doesn't make sense to you, feel free to open an issue on GitHub!
    (https://github.com/rust-lang/rustlings/issues/new). We look at every issue,
    and sometimes, other learners do too so you can help each other out!
-5. If you want to use `rust-analyzer` with exercises, which provides features like
+5. If you want to use `rust-analyzer` with exercicios, which provides features like
    autocompletion, run the command `rustlings lsp`.
 
 Got all that? Great! To get started, run `rustlings watch` in order to get the first
@@ -459,7 +459,7 @@ const FENISH_LINE: &str = "+----------------------------------------------------
 
 We hope you enjoyed learning about the various aspects of Rust!
 If you noticed any issues, please don't hesitate to report them to our repo.
-You can also contribute your own exercises to help the greater community!
+You can also contribute your own exercicios to help the greater community!
 
 Before reporting an issue or contributing, please read our guidelines:
 https://github.com/rust-lang/rustlings/blob/main/CONTRIBUTING.md";
