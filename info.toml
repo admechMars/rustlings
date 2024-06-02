@@ -68,3 +68,57 @@ path = "exercicios/03_referencia/referencia3.rs"
 mode = "test"
 hint = """
 """
+
+# Se
+
+[[exercises]]
+name = "se1"
+path = "exercicios/04_se/se1.rs"
+mode = "test"
+hint = """
+"""
+
+[[exercises]]
+name = "se2"
+path = "exercicios/04_se/se2.rs"
+mode = "test"
+hint = """
+"""
+
+# Funcoes
+
+[[exercises]]
+name = "funcoes1"
+path = "exercicios/05_funcoes/funcoes1.rs"
+mode = "compile"
+hint = """
+"""
+
+[[exercises]]
+name = "funcoes2"
+path = "exercicios/05_funcoes/funcoes2.rs"
+mode = "compile"
+hint = """
+"""
+
+[[exercises]]
+name = "funcoes3"
+path = "exercicios/05_funcoes/funcoes3.rs"
+mode = "compile"
+hint = """
+"""
+
+# Vetores
+[[exercises]]
+name = "vetores1"
+path = "exercicios/06_vetores/funcoes1.rs"
+mode = "compile"
+hint = """
+"""
+
+[[exercises]]
+name = "vetores2"
+path = "exercicios/06_vetores/funcoes2.rs"
+mode = "compile"
+hint = """
+"""
