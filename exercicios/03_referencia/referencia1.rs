@@ -5,7 +5,7 @@
 // EU NÃO ESTOU PRONTO
 
 fn main() {
-    let mut texto = "Olá".to_string();
+    let texto = "Olá".to_string();
     // Modifique apenas a linha abaixo
     let texto2 = texto;
 

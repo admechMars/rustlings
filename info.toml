@@ -14,6 +14,8 @@ name = "variaveis1"
 path = "exercicios/01_variaveis/variaveis1.rs"
 mode = "compile"
 hint = """
+A declaração na 8 linha não tem a palavra-chave que é necessária
+no Rust para dizer que o programa deve se lembrar do valor.
 """
 
 [[exercises]]
@@ -21,6 +23,9 @@ name = "variaveis2"
 path = "exercicios/01_variaveis/variaveis2.rs"
 mode = "compile"
 hint = """
+Quando usamos a palavra-chave "let" precisamos informar algo
+para ser armazenado na memória e isso está faltando na
+linha 8
 """
 
 [[exercises]]
@@ -28,6 +33,8 @@ name = "variaveis3"
 path = "exercicios/01_variaveis/variaveis3.rs"
 mode = "compile"
 hint = """
+Para tornar uma variável mutável é necessário adicionar
+um palavra-chave depois do let, na linha 8
 """
 
 # Empréstimo
@@ -37,6 +44,9 @@ name = "emprestimo1"
 path = "exercicios/02_emprestimo/emprestimo1.rs"
 mode = "compile"
 hint = """
+Definimos um valor na linha 8, porém esse valor é movido para
+a variável texto2, para fazer funcionar precisamos modificar
+a linha 12 para usar a variável que relmente possui o valor
 """
 
 [[exercises]]
@@ -44,6 +54,9 @@ name = "emprestimo2"
 path = "exercicios/02_emprestimo/emprestimo2.rs"
 mode = "compile"
 hint = """
+Agora estamos usando duas variáveis e queremos que elas
+tenham um mesmo valor, uma forma de fazer isso é usando
+a função de clonagem na linha 10
 """
 
 # Referência
@@ -53,6 +66,8 @@ name = "referencia1"
 path = "exercicios/03_referencia/referencia1.rs"
 mode = "compile"
 hint = """
+O valor de texto está sendo movido para texto2, uma forma de evitar
+isso é usando a referência do valor na linha 10
 """
 
 [[exercises]]
@@ -60,6 +75,8 @@ name = "referencia2"
 path = "exercicios/03_referencia/referencia2.rs"
 mode = "compile"
 hint = """
+Na linha 10 queremos que a nossa referência seja mutável
+tente adicionar "mut" depois do "&"
 """
 
 [[exercises]]
@@ -67,6 +84,10 @@ name = "referencia3"
 path = "exercicios/03_referencia/referencia3.rs"
 mode = "test"
 hint = """
+Sempre que indicamos que uma referência é mutável precisamos
+fazer alguma operação, seja somar, subtrair, etc. você precisa
+ordenar as linhas para que logo depois da definição de referência
+mutável haja alguma operação com o valor dela.
 """
 
 # Se
@@ -76,6 +97,8 @@ name = "se1"
 path = "exercicios/04_se/se1.rs"
 mode = "test"
 hint = """
+Para verificar se um número é maior que o outro use o operador
+">" dentro da sua condição
 """
 
 [[exercises]]
@@ -83,6 +106,8 @@ name = "se2"
 path = "exercicios/04_se/se2.rs"
 mode = "test"
 hint = """
+Você vai precisar adicionar mais de uma condicional
+para diferentes situações, no caso do else if
 """
 
 # Funcoes
@@ -92,6 +117,10 @@ name = "funcoes1"
 path = "exercicios/05_funcoes/funcoes1.rs"
 mode = "compile"
 hint = """
+Essa função principal está chamando uma função que ela espera que exista, mas a função
+não existe. Ela espera que essa função tenha o nome `alisa`.
+Ela espera que essa função não receba nenhum argumento e não retorne um valor.
+Parece muito com `main`, não é mesmo?
 """
 
 [[exercises]]
@@ -99,6 +128,8 @@ name = "funcoes2"
 path = "exercicios/05_funcoes/funcoes2.rs"
 mode = "compile"
 hint = """
+Sempre que adicionamos um parâmetro em um função precisamos indetificar
+de que tipo ele é, e isso está faltando no parâmetro `num`
 """
 
 [[exercises]]
@@ -106,6 +137,8 @@ name = "funcoes3"
 path = "exercicios/05_funcoes/funcoes3.rs"
 mode = "compile"
 hint = """
+Quando chamamos uma função é esperado que informemos os valores para os
+parâmetros que ela possue. Veja a linha 8.
 """
 
 # Vetores
@@ -114,6 +147,7 @@ name = "vetores1"
 path = "exercicios/06_vetores/funcoes1.rs"
 mode = "compile"
 hint = """
+Sem dicas por enquanto!
 """
 
 [[exercises]]
@@ -121,4 +155,5 @@ name = "vetores2"
 path = "exercicios/06_vetores/funcoes2.rs"
 mode = "compile"
 hint = """
+Sem dicas por enquanto!
 """
