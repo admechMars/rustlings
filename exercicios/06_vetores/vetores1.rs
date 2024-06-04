@@ -1,6 +1,7 @@
 // vetores1
 //
 // Digite "dica" (sem as aspas) no terminal para receber uma dica
+// EU NÃO ESTOU PRONTO
 
 
 fn lista() -> Vec<&'static str> {
@@ -8,6 +9,7 @@ fn lista() -> Vec<&'static str> {
     let lista_compras = vec![];
 
 
+    // Não modifique essa linha
     lista_compras
 }
 

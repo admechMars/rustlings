@@ -8,8 +8,10 @@ fn lista() -> Vec<&'static str> {
     // Não modifique a linha abaixo
     let mut lista_compras = vec!["Tomate", "Macarrão", "Vinagre"];
 
-    // Adicione "Batata" e "Molho" a lista de compras
+    // Adicione "Batata" e "Molho" a lista de compras abaixo
 
+
+    // Não modifique essa linha
     lista_compras
 }
 
