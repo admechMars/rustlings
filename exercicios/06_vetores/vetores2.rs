@@ -4,12 +4,23 @@
 
 // EU NÃO ESTOU PRONTO
 
-#[test]
-fn main() {
+fn lista() -> Vec<&'static str> {
     // Não modifique a linha abaixo
     let mut lista_compras = vec!["Tomate", "Macarrão", "Vinagre"];
 
     // Adicione "Batata" e "Molho" a lista de compras
 
-    assert_eq!(lista_compras, Vec::new("Tomate", "Macarrão", "Vinagre", "Batata", "Molho"))
+    lista_compras
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_vec_similarity() {
+        let lista_compras = lista();
+
+        assert_eq!(lista_compras, vec!["Tomate", "Macarrão", "Vinagre", "Batata", "Molho"])
+    }
 }

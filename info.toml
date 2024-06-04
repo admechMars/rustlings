@@ -145,7 +145,7 @@ parâmetros que ela possue. Veja a linha 8.
 [[exercises]]
 name = "vetores1"
 path = "exercicios/06_vetores/vetores1.rs"
-mode = "compile"
+mode = "test"
 hint = """
 Sem dicas por enquanto!
 """
@@ -153,7 +153,7 @@ Sem dicas por enquanto!
 [[exercises]]
 name = "vetores2"
 path = "exercicios/06_vetores/vetores2.rs"
-mode = "compile"
+mode = "test"
 hint = """
 Sem dicas por enquanto!
 """
