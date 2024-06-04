@@ -155,7 +155,7 @@ fn compile<'a>(
         Err(output) => {
             progress_bar.finish_and_clear();
             warn!(
-                "Compiling of {} failed! Please try again. Here's the output:",
+                "Falha ao compilar o exercício {}! Por favor tente novamente, este é o problema:",
                 exercise
             );
             println!("{}", output.stderr);
