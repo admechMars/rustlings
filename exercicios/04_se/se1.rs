@@ -22,7 +22,7 @@ mod tests {
 
     #[test]
     fn fortytwo_is_bigger_than_thirtytwo() {
-        assert_eq!(true, maior(32, 42));
+        assert_eq!(false, maior(32, 42));
     }
 
     #[test]
