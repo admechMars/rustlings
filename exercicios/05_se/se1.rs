@@ -5,7 +5,7 @@
 // EU NÃO ESTOU PRONTO
 
 pub fn maior(a: i32, b: i32) -> bool {
-    // Verifique se o número 'a' é maior que o número 'b'
+    // Retorne `true` se o número 'a' for maior que o número 'b'
     // usando condicional (if)
 
 }

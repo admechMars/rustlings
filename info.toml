@@ -37,6 +37,14 @@ Para tornar uma variável mutável é necessário adicionar
 um palavra-chave depois do let, na linha 8
 """
 
+[[exercises]]
+name = "variaveis_quiz"
+path = "exercicios/01_variaveis/variaveis_quiz.rs"
+mode = "compile"
+hint = """
+Sem dicas por enquanto, tente voltar nos arquivos anteriores
+"""
+
 # Empréstimo
 
 [[exercises]]
@@ -90,31 +98,11 @@ ordenar as linhas para que logo depois da definição de referência
 mutável haja alguma operação com o valor dela.
 """
 
-# Se
-
-[[exercises]]
-name = "se1"
-path = "exercicios/04_se/se1.rs"
-mode = "test"
-hint = """
-Para verificar se um número é maior que o outro use o operador
-">" dentro da sua condição
-"""
-
-[[exercises]]
-name = "se2"
-path = "exercicios/04_se/se2.rs"
-mode = "test"
-hint = """
-Você vai precisar adicionar mais de uma condicional
-para diferentes situações, no caso do else if
-"""
-
 # Funcoes
 
 [[exercises]]
 name = "funcoes1"
-path = "exercicios/05_funcoes/funcoes1.rs"
+path = "exercicios/04_funcoes/funcoes1.rs"
 mode = "compile"
 hint = """
 Essa função principal está chamando uma função que ela espera que exista, mas a função
@@ -125,7 +113,7 @@ Parece muito com `main`, não é mesmo?
 
 [[exercises]]
 name = "funcoes2"
-path = "exercicios/05_funcoes/funcoes2.rs"
+path = "exercicios/04_funcoes/funcoes2.rs"
 mode = "compile"
 hint = """
 Sempre que adicionamos um parâmetro em um função precisamos indetificar
@@ -134,11 +122,48 @@ de que tipo ele é, e isso está faltando no parâmetro `num`
 
 [[exercises]]
 name = "funcoes3"
-path = "exercicios/05_funcoes/funcoes3.rs"
+path = "exercicios/04_funcoes/funcoes3.rs"
 mode = "compile"
 hint = """
 Quando chamamos uma função é esperado que informemos os valores para os
 parâmetros que ela possue. Veja a linha 8.
+"""
+
+[[exercises]]
+name = "funcoes_quiz"
+path = "exercicios/04_funcoes/funcoes_quiz.rs"
+mode = "compile"
+hint = """
+Sem dicas por enquanto, tente voltar nos arquivos anteriores
+"""
+
+# Se
+
+[[exercises]]
+name = "se1"
+path = "exercicios/05_se/se1.rs"
+mode = "test"
+hint = """
+Para verificar se um número é maior que o outro use o operador
+">" dentro da sua condição
+"""
+
+[[exercises]]
+name = "se2"
+path = "exercicios/05_se/se2.rs"
+mode = "test"
+hint = """
+Você vai precisar adicionar mais de uma condicional
+para diferentes situações, no caso do else if
+"""
+
+# Quiz 1
+[[exercises]]
+name = "quiz1"
+path = "exercicios/quiz1.rs"
+mode = "test"
+hint = """
+Sem dicas por enquanto
 """
 
 # Vetores
