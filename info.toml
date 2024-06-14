@@ -40,7 +40,7 @@ um palavra-chave depois do let, na linha 8
 [[exercises]]
 name = "variaveis_quiz"
 path = "exercicios/01_variaveis/variaveis_quiz.rs"
-mode = "compile"
+mode = "test"
 hint = """
 Sem dicas por enquanto, tente voltar nos arquivos anteriores
 """
