@@ -4,7 +4,7 @@
 
 // EU NÃO ESTOU PRONTO
 
-fn main() -> (&str, i32, f64) {
+fn meus_dados() -> (&str, i32, f64) {
     // crie 3 variáveis com o seu `nome`, `idade` e `altura`
 
     // Não modificar a linha abaixo
