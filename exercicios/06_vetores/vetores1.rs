@@ -1,12 +1,11 @@
 // vetores1
 //
 // Digite "dica" (sem as aspas) no terminal para receber uma dica
-// EU NÃO ESTOU PRONTO
 
 
 fn lista() -> Vec<&'static str> {
     // Adicione "Tomate", "Macarrão" e "Vinagre" a lista
-    let lista_compras = vec![];
+    let lista_compras = vec!["Tomate", "Macarrão","Vinagre"];
 
 
     // Não modifique essa linha

@@ -2,12 +2,15 @@
 //
 // Digite "dica" (sem as aspas) no terminal para receber uma dica
 
-// EU NÃO ESTOU PRONTO
 
 pub fn maior(a: i32, b: i32) -> bool {
     // Retorne `true` se o número 'a' for maior que o número 'b'
     // usando condicional (if)
-
+    if a>b{
+        true
+    }else{
+        false
+    }
 }
 
 // Ignore isso por enquanto :)

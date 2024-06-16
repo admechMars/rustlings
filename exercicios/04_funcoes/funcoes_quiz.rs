@@ -2,13 +2,15 @@
 //
 // Sem dicas por enquanto :/
 
-// EU NÃO ESTOU PRONTO
 
 fn main() {
     // Invoque a função soma e exiba o resultado da soma na tela
+    soma(1,1);
 }
 
 // Crie uma função chamada soma que recebe dois números inteiros
 // retone o resultado da soma
 
-fn
+fn soma(n1:i32,n2:i32){
+    n1+n2;
+}

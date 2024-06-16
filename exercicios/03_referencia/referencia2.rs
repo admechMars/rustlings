@@ -2,12 +2,11 @@
 //
 // Digite "dica" (sem as aspas) no terminal para receber uma dica
 
-// EU NÃO ESTOU PRONTO
 
 fn main() {
     let mut texto = "Salve";
     // Modifique apenas a linha abaixo
-    let texto2 = &texto;
+    let texto2 = &mut texto;
 
     *texto2 = "Olá";
 

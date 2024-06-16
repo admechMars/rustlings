@@ -2,7 +2,6 @@
 //
 // Digite "dica" (sem as aspas) no terminal para receber uma dica
 
-// EU NÃO ESTOU PRONTO
 
 // Faça uma condicional para:
 // Se palvra for igual a fizz retorne "foo"
@@ -11,8 +10,10 @@
 pub fn foo_if_fizz(palavra: &str) -> &str {
     if palavra == "fizz" {
         "foo"
-    } else {
-        1
+    } else if palavra ==  "fuzz" {
+        "bar"
+    }else{
+        "baz"
     }
 }
 

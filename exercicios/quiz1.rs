@@ -13,7 +13,6 @@
 //
 // Sem dicas dessa vez ;)
 
-// EU NÃO ESTOU PRONTO
 
 // Escreva sua função abaixo
 // fn calcula_preco {
@@ -32,4 +31,12 @@ fn verify_test() {
     assert_eq!(80, price2);
     assert_eq!(41, price3);
     assert_eq!(65, price4);
+}
+
+fn calcula_preco(qnt:i32)->i32{
+    if qnt>40{
+        qnt
+    }else{
+        qnt * 2
+    }
 }

@@ -2,10 +2,9 @@
 //
 // Digite "dica" (sem as aspas) no terminal para receber uma dica
 
-// EU NÃO ESTOU PRONTO
 
 fn main() {
-    meu_numero();
+    meu_numero(32);
 }
 
 // Modifique apenas a linha de baixo

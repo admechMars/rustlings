@@ -2,7 +2,6 @@
 //
 // Digite "dica" (sem as aspas) no terminal para receber uma dica
 
-// EU NÃO ESTOU PRONTO
 
 fn lista() -> Vec<&'static str> {
     // Não modifique a linha abaixo
@@ -10,6 +9,8 @@ fn lista() -> Vec<&'static str> {
 
     // Adicione "Batata" e "Molho" a lista de compras abaixo
     // usando push
+    lista_compras.push("Batata");
+    lista_compras.push("Molho");
 
 
     // Não modifique a linha abaixo
